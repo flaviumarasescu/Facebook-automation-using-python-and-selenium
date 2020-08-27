@@ -23,7 +23,7 @@ prefs = {"profile.default_content_setting_values.notifications" : 2}
 chrome_options.add_experimental_option("prefs",prefs)
 driver = webdriver.Chrome(options=chrome_options)
 
-#driver = webdriver.Chrome("C:\Users\Flaviu\chromedriver_win32")
+
 
 class PostOnFacebook():
         def post_on_facebook(self, user, pwd):
@@ -48,11 +48,11 @@ class PostOnFacebook():
 
             time.sleep(5)
 
-            driver.get('https://www.facebook.com/Alcatar-102348491598424/')
+            driver.get('https://www.facebook.com/fb-page/')
             time.sleep(5)
 
             status = driver.find_element_by_tag_name("textarea")
-            status.send_keys("aaaaa")
+            status.send_keys("text")
 
             driver.implicitly_wait(10)
 
@@ -63,7 +63,7 @@ class PostOnFacebook():
 
 
 
-text_file = open("conturi.txt", "r")
+text_file = open("text.txt", "r")
 lines = text_file.read().split()
 print(lines)
 print(len(lines))
